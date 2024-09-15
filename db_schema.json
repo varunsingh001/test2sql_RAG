@@ -1,0 +1,75 @@
+{
+    "employees": {
+      "columns": {
+        "id": {
+          "type": "integer",
+          "description": "Unique identifier for each employee"
+        },
+        "name": {
+          "type": "text",
+          "description": "The name of the employee"
+        },
+        "age": {
+          "type": "integer",
+          "description": "Age of the employee"
+        },
+        "department_id": {
+          "type": "integer",
+          "description": "ID of the department the employee belongs to"
+        },
+        "hire_date": {
+          "type": "date",
+          "description": "The date the employee was hired"
+        },
+        "salary": {
+          "type": "float",
+          "description": "The employee's salary"
+        },
+        "project_id": {
+          "type": "integer",
+          "description": "ID of the department the employee belongs to"
+        }
+      },
+      "primary_key": ["id"],
+      "foreign_keys": {
+        "department_id": {
+          "references": "departments(id)"
+        }
+      }
+    },
+    "departments": {
+      "columns": {
+        "id": {
+          "type": "integer",
+          "description": "Unique identifier for each department"
+        },
+        "name": {
+          "type": "text",
+          "description": "The name of the department"
+        },
+        "location": {
+          "type": "text",
+          "description": "The location of the department"
+        }
+      },
+      "primary_key": ["id"]
+    },
+    "projects": {
+      "columns": {
+        "id": {
+          "type": "integer",
+          "description": "Unique identifier for each project"
+        },
+        "name": {
+          "type": "text",
+          "description": "The name of the project"
+        },
+        "cost": {
+          "type": "long",
+          "description": "The cost involved in the project"
+        }
+      },
+      "primary_key": ["id"]
+    }
+  }
+  
